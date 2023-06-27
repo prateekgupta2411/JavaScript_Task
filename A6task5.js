@@ -6,4 +6,4 @@ const sideA = 5;
 const sideB = 6;
 const sideC = 7;
 const result = isTriangle(sideA, sideB, sideC);
-console.log(result); // Output: false
+console.log(result);
