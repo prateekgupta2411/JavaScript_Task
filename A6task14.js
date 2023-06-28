@@ -2,11 +2,11 @@ function sumOfDigits(n) {
     let sum = 0;
     while (true) {
         if (n === 0) {
-        break;
+            break;
         }
         let digit = n % 10;
         sum += digit;
-        n = Math.floor(n / 10);
+        n = (n - digit) / 10;
     }
     return sum;
 }
