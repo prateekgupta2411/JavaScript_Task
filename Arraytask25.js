@@ -1,3 +1,5 @@
+// Task 1
+//(i)
 const arr1 = [5, 18, 26, 30];
 const arr2 = [101, 102];
 const newarr = [];
@@ -12,3 +14,6 @@ for (let i = 0; i < maxLength; i++) {
     }
 }
 console.log(newarr);
+
+//(ii)
+
