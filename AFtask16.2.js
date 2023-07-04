@@ -8,8 +8,18 @@ const array = [
     {"name":"Bruce","marks":[52,57,61,64]}
 ];
 array.sort((a, b) => {
-    const maxMarksA = Math.max(...a.marks);
-    const maxMarksB = Math.max(...b.marks);
-        return maxMarksA - maxMarksB;
+    const maxMarksA = getMaxMarks(a.marks);
+    const maxMarksB = getMaxMarks(b.marks);
+    return maxMarksA - maxMarksB;
 });
 console.log(array);
+
+function getMaxMarks(marks) {
+    let maxMark = marks[0];
+    for (let i = 1; i < marks.length; i++) {
+        if (marks[i] > maxMark) {
+            maxMark = marks[i];
+        }
+    }
+    return maxMark;
+}
