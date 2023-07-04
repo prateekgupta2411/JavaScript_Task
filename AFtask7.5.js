@@ -11,21 +11,21 @@ const students = [
     {"name": "Harpreet", "country": "India", "age": 48},
     {"name": "Bob", "country": "USA", "age": 21}
 ];
-const filterStudentsByAge = (students, minAge) => {
+
+function filterStudentsByAge(students, minAge) {
     const filteredStudents = students.filter(student => student.age > minAge);
     const firstStudent = filteredStudents.find(student => student.age > minAge);
     const firstStudentIndex = students.findIndex(student => student.age > minAge);
-    
+
     return {
         filteredStudents,
         firstStudent,
         firstStudentIndex
     };
-};
-const minAge = 30; // Minimum age
-
+}
+const minAge = 30; // minimum age
 const { filteredStudents, firstStudent, firstStudentIndex } = filterStudentsByAge(students, minAge);
 
-console.log("Filtered Students:",filteredStudents);
-console.log("First Student with age greater than minAge:",filterStudent);
-console.log("Index of First Student with age greater than minAge:",irstStudentIndex);
+console.log("Filtered Students:", filteredStudents);
+console.log("First Student with age greater than minAge:", firstStudent);
+console.log("Index of First Student with age greater than minAge:", firstStudentIndex);
