@@ -8,15 +8,26 @@ const students = [
     {"name":"Bruce","marks":[52,57,61,64]}
 ];
 function getStudentsByTotalMarks(minTotal) {
-        const filteredStudents = students.filter(student => {
-        const totalMarks = student.marks.reduce((acc, curr) => acc + curr, 0);
+    const filteredStudents = students.filter(student => {
+        let totalMarks = 0;
+        for (let i = 0; i < student.marks.length; i++) {
+            totalMarks += student.marks[i];
+        }
         return totalMarks > minTotal;
     });
+
     filteredStudents.sort((a, b) => {
-        const totalMarksA = a.marks.reduce((acc, curr) => acc + curr, 0);
-        const totalMarksB = b.marks.reduce((acc, curr) => acc + curr, 0);
+        let totalMarksA = 0;
+        let totalMarksB = 0;
+        for (let i = 0; i < a.marks.length; i++) {
+            totalMarksA += a.marks[i];
+        }
+        for (let i = 0; i < b.marks.length; i++) {
+            totalMarksB += b.marks[i];
+        }
         return totalMarksB - totalMarksA;
     });
+
     return filteredStudents;
 }
 const minTotal = 250;

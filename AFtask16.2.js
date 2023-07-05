@@ -15,7 +15,7 @@ array.sort((a, b) => {
 console.log(array);
 
 function getMaxMarks(marks) {
-    let maxMark = marks[0];
+    let maxMark = marks[0];  
     for (let i = 1; i < marks.length; i++) {
         if (marks[i] > maxMark) {
             maxMark = marks[i];
