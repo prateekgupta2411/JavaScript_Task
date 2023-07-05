@@ -1,0 +1,7 @@
+const input = [10, 8, 6, 4, 2, 25];
+const output = input.map(number => number * 2).reduce((acc, number) => {
+    acc.push(number);
+    return acc;
+}, []);
+
+console.log(output);
